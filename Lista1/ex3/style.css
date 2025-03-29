@@ -1,0 +1,20 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tableUser {
+    width: 60%; 
+    margin: 20px 0; 
+    text-align: left;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2cap;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
