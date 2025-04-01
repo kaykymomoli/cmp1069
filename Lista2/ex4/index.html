@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <hr>
+    <p>
+        Nome <input type="text" id="nome" placeholder="Digite seu nome.">
+    </p>
+    <p>
+        Idade <input type="number" id="idade" placeholder="Digite sua idade.">
+    </p>
+    <p>
+        Cargo <input type="text" id="cargo" placeholder="Digite seu cargo.">
+    </p>
+    <p>
+        Salário <input type="text" id="salario" placeholder="Digite seu salário.">
+    </p>
+    <button id="botaoCadastrar">Cadastrar</button>
+    <table id="tableUser">
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cargo</th>
+            <th>Salário</th>
+        </tr>
+    </table>
+    <hr>
+    <p>
+        Buscar Funcionário <input type="text" id="buscarFuncionario" placeholder="Digite o nome do funcionário.">
+        <button id="buttonBuscarFuncionario">Buscar</button>
+    </p>
+    <p id="textoBuscaFuncionario"></p>
+    <button id="gerarRelatorio">Gerar Relatório</button>
+    <p id="alunosAprovados">
+        Funcionários com salário maior que R$ 5000:
+    </p>
+    <p id="mediaNotas">
+        Média salarial:
+    </p>
+    <p id="mediaIdades">
+        Cargos: 
+    </p>
+    <p id="alunosCursos">
+        Nomes:
+    </p>
+    <script src = "main.js"></script>
+</body>
+</html>
