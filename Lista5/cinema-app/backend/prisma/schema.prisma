@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")  // Vai pegar a URL de conexão do .env
+}
+
+model Filme {
+  id             Int      @id @default(autoincrement())
+  titulo         String
+  descricao      String
+  genero         String
+  classificacao  String
+  duracao        Int
+  estreia        DateTime
+  sessoes    Sessao[] // Relação oposta com a Sessão
+}
+
+model Sala {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  capacidade Int
+  tipo       String
+  sessoes    Sessao[] // Relação oposta com a Sessão
+}
+
+model Sessao {
+  id         Int      @id @default(autoincrement())
+  salaId     Int      // Referência à sala
+  filmeId    Int      // Referência ao filme
+  dataHora   DateTime // Data e hora da sessão
+  preco      Float    // Preço do ingresso
+  idioma     String   // Idioma da sessão (ex: "Legendado", "Dublado")
+
+  sala       Sala     @relation(fields: [salaId], references: [id]) // Relacionamento com a Sala
+  filme      Filme    @relation(fields: [filmeId], references: [id]) // Relacionamento com o Filme
+}

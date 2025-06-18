@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <hr>
+    <div class="inputs">
+        <p> 
+            Nome: <input type="text" id="nome" placeholder="Digite seu nome">
+        </p>
+        <p>
+            Idade: <input type="number" id="idade" placeholder="Digite sua idade">
+        </p>
+        <p>
+            Curso: <select id="curso">
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                </select>
+        </p>
+        <p>
+            Nota Final: <input type="number" id="notaFinal" placeholder="Digite sua nota final">
+        </p>
+        <button onclick="adicionarTabela()">Cadastrar</button>
+        <br>
+        <br>
+        <br>
+        <table id="tableUser">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Curso</th>
+                <th>Nota Final</th>
+            </tr>  
+        </table>
+    </div>
+    <script src = "main.js"></script>
+</body>
+</html>
